@@ -1,0 +1,24 @@
+{
+  "name": "bot-telegram",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "dotenv": "9.0.0",
+    "knex": "0.95.4",
+    "koa": "2.13.1",
+    "mysql": "2.18.1",
+    "node-telegram-bot-api": "0.53.0",
+    "pm2": "^4.5.6",
+    "svg-captcha": "1.4.0",
+    "svg-to-img": "2.0.9",
+    "twitter-api-v2": "1.1.0"
+  },
+  "scripts": {
+    "migrate": "./node_modules/.bin/knex migrate:latest",
+    "start": "./node_modules/.bin/pm2 start bot.js --watch --name=Dogeking_bot",
+    "stop": "./node_modules/.bin/pm2 stop bot.js",
+    "logs": "./node_modules/.bin/pm2 logs Dogeking_bot"
+  },
+  "license": "ISC"
+}
